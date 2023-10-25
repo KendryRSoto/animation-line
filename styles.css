@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #282c35;
+  overflow: hidden;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background-color: #00FF00;
+  position: absolute;
+  animation: moveLine 6s linear infinite, changeColor 6s infinite;
+  left: 0;
+}
+
+@keyframes moveLine {
+  0%, 100% {
+    left: 0;
+  }
+  25% {
+    left: calc(100vw - 100px);
+    animation-timing-function: ease-in-out;
+  }
+  60% {
+    left: 0;
+  }
+}
+@keyframes changeColor {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: green;
+  }
+  60% {
+    background-color: blue;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
